@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS연습문제02</title>
+    <style>
+        /* * {margin:0; padding:0;} */
+        .center {
+            text-align: "center";
+            width: 100px;
+            height: 100px;
+            margin: auto;
+        }
+        .box1 {
+            text-align: "center";
+            margin: auto; /* 중요!! - 박스 자체를 가운데 정렬 */
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            line-height: 300px;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 100px;
+        }
+        .temp {
+            width: 100px;
+            background-color:aquamarine;
+            color: white;
+        }
+        .temp0 {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <h1>1번.</h1>
+    <i class="fa-solid fa-calendar"></i>
+
+    <h1>2번.</h1>
+    <h1 class="center">html5</h1>
+
+    <h1>3번.</h1>
+    <div class="box1">html5</div>
+
+    <h1>4번.</h1>
+    <div class="box2">css</div>
+
+    <h1>5번.</h1>
+    <div>
+        <ul>
+            <li class="temp0 temp">Home</li>
+            <li class="temp0">News</li>
+            <li class="temp0">Contact</li>
+            <li class="temp0">Abount</li>
+        </ul>
+    </div>
+
+</body>
+</html>
