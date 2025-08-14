@@ -13,6 +13,27 @@
             margin: 0;
             padding: 0;
         }
+        /* 교재 254~257쪽 예제 */
+        div { border: 1px ridge black;}
+        .box1 { border-width: 2px; border-color: red;}
+        .box2 { border-width: thick thin; 
+                border-top-color: blue; border-bottom-color: violet;}
+        .box3 { border-width: thick thin thin;
+                border-left-color: indigo;}
+        .box4 { border-width: 10px 5px 5px 10px; }
+        /* 교재 258쪽 예제 */
+        h1 {
+            padding-bottom: 5px;
+            border-bottom: 3px solid rgb(75, 70, 70);
+        }
+        p {
+            padding: 10px;
+            border: 3px dotted blue;
+        }
+        .corner{
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
     </style>
 </head>
 <body>
@@ -23,5 +44,11 @@
     <p style="text-decoration:underline">underline</p>
     <p style="text-decoration:overline">overline</p>
     <p style="text-decoration:line-through">line-through</p>
+
+    <div class="box1 corner">1번</div>
+    <div class="box2">2번</div>
+    <div class="box3">3번</div>
+    <div class="box4">4번</div>
+
 </body>
 </html>

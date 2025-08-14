@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout연습01</title>
+    <style>
+        /* reset css */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 100%;
+            height: 200px;
+            background-color: black;
+            color: white;
+        }
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+        .topnav a {
+            float: left;
+            color: #f9ddff;
+            text-align: center;
+            padding: 14px 16px;
+        }
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+        nav {
+            height: 50px;
+            background-color: gray;
+        }
+        article {
+            width: 80%;
+            height: 500px;
+            background-color: #eeeeee;
+            float: left;
+        }
+        .box {
+            width: 30%;
+            height: 200px;
+            border: 1px solid black;
+            margin: 1px;
+            /* box-sizing:border-box; */
+        }
+        #box1 {float: left; position: relative; left: 15%; top: 138px;}
+        #box2 {float: right; position: relative; right: 15%; top: 138px;}
+        aside {
+            width: 20%;
+            height: 500px;
+            background-color: #dddddd;
+            float: left;
+        }
+        footer {
+            clear: both;
+            height: 100px;
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <!-- 머리말 ------------------------------------------------------------------------>
+    <header>
+        <h1>글로벌아이티</h1>
+    </header>
+    <!-- /머리말 -->
+
+    <!-- navigation ------------------------------------------------------------------->
+    <nav class="topnav">
+        <a class="active" href="#교육원소개">교육원소개</a>
+        <a href="#교육원연혁">교육원연혁</a>
+        <a href="#과정소개">과정소개</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <!-- /navigation -->
+
+    <!-- 컨텐트 ------------------------------------------------------------------------>
+    
+    <article>글로벌아이티 소개
+        <section style="clear: left;">
+            <section class="box" id="box1"></section>
+            <section class="box" id="box2"></section>
+        </section>
+    </article>
+            
+    <!-- /컨텐트 -->
+
+    <!-- 광고 -------------------------------------------------------------------------->
+    <aside>광고</aside>
+    <!-- /광고 -->
+
+    <!-- 저작권 ------------------------------------------------------------------------>
+    <footer>&copy;All rights reserved by 글로벌아이티.</footer>
+    <!-- /저작권 -->
+</body>
+</html>
