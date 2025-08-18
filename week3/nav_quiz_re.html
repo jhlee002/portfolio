@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갤러리 형식 연습</title>
+    <style>
+        .gall {
+            display: block;
+            width: 200px;
+            height: 200px;
+            border: 1px solid rgb(177, 177, 177);
+            float: left;
+            margin: 15px;
+            text-align: center;
+
+        }
+       
+        nav ul a:hover, nav ul a:active {
+            border: 1px solid black;
+        }
+        
+        .bg1 {
+            background: url('/images/cliff.jpg') no-repeat;
+            background-size: 100% 70%;
+        }
+        .bg2 {
+            background: url('/images/path_mountain.jpg') no-repeat;
+            background-size: 100% 70%;
+        }
+        .bg3 {
+            background: url('/images/aurora.jpg') no-repeat;
+            background-size: 100% 70%;
+        }
+        .bg4 {
+            background: url('/images/lake_winter.jpg') no-repeat;
+            background-size: 100% 70%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Image Gallery</h1>
+        <p>Resize the browser window to see the responsive effect:</p>
+        <ul>
+            <li class="gall"><a href="#" class="bg1"></a><label>Add a description of the image here</label></li>
+            <li class="gall"><a href="#" class="bg1"></a><label>Add a description of the image here</label></li>
+            <li class="gall"><a href="#" class="bg1"></a><label>Add a description of the image here</label></li>
+            <li class="gall"><a href="#" class="bg1"></a><label>Add a description of the image here</label></li>
+        </ul>
+    </nav>
+</body>
+</html>

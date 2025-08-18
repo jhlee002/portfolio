@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 이미지 갤러리 샘플 만들기</title>
+    <style>
+
+        div a:link, div a:visited {
+            width: 200px;
+            height: 200px;
+            border: 1px solid rgb(177, 177, 177);
+            float: left;
+            margin-right: 15px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+        }
+        div a:hover, div a:active {
+            border: 1px solid black;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+        }
+        .bg1 {
+            background: url('/images/cliff.jpg') no-repeat;
+            background-size: 100% 70%;
+        }
+        .bg2 {
+            background: url('/images/path_mountain.jpg') no-repeat;
+            background-size: 100% 70%;
+        }
+        .bg3 {
+            background: url('/images/aurora.jpg') no-repeat;
+            background-size: 100% 70%;
+        }
+        .bg4 {
+            background: url('/images/lake_winter.jpg') no-repeat;
+            background-size: 100% 70%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <p>Resize the browser window to see the responsive effect:</p>
+    <nav id="Gallery">
+        <div><a href="#" class="bg1"><label>Add a description of the image here</label></a></div>
+        <div><a href="#" class="bg2"><label>Add a description of the image here</label></a></div>
+        <div><a href="#" class="bg3"><label>Add a description of the image here</label></a></div>
+        <div><a href="#" class="bg4"><label>Add a description of the image here</label></a></div>
+    </nav>
+</body>
+</html>
