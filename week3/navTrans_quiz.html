@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout연습01</title>
+    <style>
+        /* reset css */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 100%;
+            height: 200px;
+            background-color: black;
+            color: white;
+        }
+        nav {
+            height: 50px;
+            background-color: gray;
+            position: relative;
+        }
+        nav ul li {
+            display: block;
+            margin-right: 10px;
+            float: left;
+        }
+        .box { 
+            width:100px; 
+            height:100px;
+            text-align: center;
+            border:1px solid black;
+        }
+        #sub:not([hover]) {
+            transform: translateY(-130px);
+        }
+    
+        #sub:hover {
+            transform: translateY(10px);
+        }
+        article {
+            width: 80%;
+            height: 500px;
+            background-color: #eeeeee;
+            float: left;
+        }
+        aside {
+            width: 20%;
+            height: 500px;
+            background-color: #dddddd;
+            float: left;
+        }
+        footer {
+            clear: both;
+            height: 100px;
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <!-- 머리말 ------------------------------------------------------------------------>
+    <header>
+        <h1>글로벌아이티</h1>
+    </header>
+    <!-- /머리말 -->
+
+    <!-- navigation ------------------------------------------------------------------->
+    <nav>
+        <ul>
+            <li>교육원소개</li>
+            <li>교육원연혁</li>
+            <li id="intro">과정소개
+                <div id="sub" class="box" style="z-index:10px;">
+                    <p>백엔드과정</p>
+                    <p>풀스택과정</p>
+                    <p>UI/UX과정</p>
+                </div>
+            </li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <!-- /navigation -->
+
+    <!-- 컨텐트 ------------------------------------------------------------------------>
+    <article>글로벌아이티 소개</article>
+    <!-- /컨텐트 -->
+
+    <!-- 광고 -------------------------------------------------------------------------->
+    <aside>광고</aside>
+    <!-- /광고 -->
+
+    <!-- 저작권 ------------------------------------------------------------------------>
+    <footer>&copy;All rights reserved by 글로벌아이티.</footer>
+    <!-- /저작권 -->
+</body>
+</html>

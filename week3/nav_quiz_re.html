@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>갤러리 형식 연습</title>
     <style>
-        .gall {
+        /* #gall {
             display: block;
             width: 200px;
             height: 200px;
             border: 1px solid rgb(177, 177, 177);
             float: left;
-            margin: 15px;
-            text-align: center;
-
+            margin-right: 15px;
+        } */
+        #gall a:link, a:visited {
+            width: 200px;
+            height: 200px;
+            border: 1px solid rgb(177, 177, 177);
+            float: left;
+            margin: auto;
         }
-       
-        nav ul a:hover, nav ul a:active {
+        
+        #gall ul a:hover, ul a:active {
             border: 1px solid black;
         }
         
@@ -42,11 +47,31 @@
     <nav>
         <h1>Image Gallery</h1>
         <p>Resize the browser window to see the responsive effect:</p>
-        <ul>
-            <li class="gall"><a href="#" class="bg1"></a><label>Add a description of the image here</label></li>
-            <li class="gall"><a href="#" class="bg1"></a><label>Add a description of the image here</label></li>
-            <li class="gall"><a href="#" class="bg1"></a><label>Add a description of the image here</label></li>
-            <li class="gall"><a href="#" class="bg1"></a><label>Add a description of the image here</label></li>
+        <ul id="gall">
+            <li>
+                <a href="#"></a>
+                <div>
+                    Add a description of the image here
+                </div>
+            </li>
+            <li>
+                <a href="#"></a>
+                <div>
+                    Add a description of the image here
+                </div>
+            </li>
+            <li>
+                <a href="#"></a>
+                <div>
+                    Add a description of the image here
+                </div>
+            </li>
+            <li>
+                <a href="#"></a>
+                <div>
+                    Add a description of the image here
+                </div>
+            </li>
         </ul>
     </nav>
 </body>
