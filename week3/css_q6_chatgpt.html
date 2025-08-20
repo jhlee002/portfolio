@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 연습문제 6</title>
+    <style>
+        /* 공통 스타일: 컨테이너 */
+        .container {
+            float: left;
+            list-style-type: none;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin-right: 10px;
+            position: relative;
+        }
+
+        /* 비디오 스타일 */
+        .vid {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* 비디오가 상자 뒤에 오도록 */
+        }
+
+        .vid video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 비디오 비율 유지 */
+        }
+
+        /* 상자 스타일: 배경을 반투명하게 설정 */
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid gray;
+            background: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            line-height: 200px;
+            color: white; /* 글자가 잘 보이게 흰색으로 설정 */
+            transition: transform 1s; /* 상자 이동 애니메이션 */
+        }
+
+        /* 마우스를 올렸을 때 상자 이동 */
+        .container:hover .box {
+            transform: translateY(0);
+        }
+
+        /* 초기 상자 위치 */
+        .container .box {
+            transform: translateY(150px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="vid">
+            <video loop autoplay muted>
+                <source src="/images/city(night)_tiny.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="box">1</div>
+    </div>
+
+    <div class="container">
+        <div class="vid">
+            <video loop autoplay muted>
+                <source src="/images/river_tiny.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="box">2</div>
+    </div>
+
+    <div class="container">
+        <div class="vid">
+            <video loop autoplay muted>
+                <source src="/images/strawberry_tiny.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="box">3</div>
+    </div>
+</body>
+</html>
