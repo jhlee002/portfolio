@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- semantic tag -------------------->
+    <!-- 시각적 효과보다는 의미를 갖는 태그 -->
+    <!-- 사람보다는 Device(H/W, S/W)에 의미를 전달하는게 목적 -->
+    <!-- 여기서 Device는 Screen Reader기, 검색엔진 등이 있음 -->
+    <h1>주문서</h1>
+
+    <form action="orders.jsp">
+        <!-- fieldset은 테두리를 만든다. -->
+        <fieldset>
+            <legend>배송 정보</legend>
+            <ul id="shipping">
+                <li>
+                    <!-- label의 for 속성과 input의 id 속성의 값을 일치시켜 연결한다. -->
+                    <label for="prod">주문 상품</label>
+                    <!-- readonly속성을 적용하면 텍스트 수정 불가  -->
+                    <input type="text" id="prod" value="상품용 3KG" readonly>
+                </li>
+                <li>
+                    <label for="user-name">이름</label>
+                    <input type="text" id="user-name" autofocus required>
+                </li>
+                <li>
+                    <label for="addr">배송 주소</label>
+                    <input type="text" id="addr" required>
+                </li>
+                <li>
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" required>
+                </li>       
+                <li>
+                    <label for="phone">연락처</label>
+                    <input type="tel" id="phone" placeholder="하이픈(-) 빼고 입력해 주세요." required>
+                </li>
+                <li>
+                    <label for="d-day">배송 지정</label>
+                    <input type="date" id="d-day"><small>주문일로부터 최소 3일 이후</small>
+                </li>
+            </ul>
+        </fieldset>
+        <div>
+            <input type="submit" value="주문하기">
+            <input type="reset" value="취소하기">
+        </div>
+    </form>
+    
+    <!-- emmet 이용 -->
+    <!-- ul>li*5 -->
+    <!-- <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul> -->
+    <!-- table>tr*3>td*2 -->
+    <!-- <table>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table> -->
+
+
+</body>
+</html>
