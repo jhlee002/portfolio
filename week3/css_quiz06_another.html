@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS연습문제6번</title>
+    <style>
+        #container1 {
+            float: left;
+            list-style-type: none;
+            width:200px;
+            height:200px;
+            border: 1px solid black;
+            margin-right: 10px;
+            position: relative;
+            background: url('/images/aurora.jpg');
+        }
+        #container2 {
+            float: left;
+            list-style-type: none;
+            width:200px;
+            height:200px;
+            border: 1px solid black;
+            margin-right: 10px;
+            position: relative;
+        }
+        #container3 {
+            float: left;
+            list-style-type: none;
+            width:200px;
+            height:200px;
+            border: 1px solid black;
+            margin-right: 10px;
+            /* background: teal; */
+            position: relative;
+        }
+
+        #container1>#box1 {
+            width:200px;
+            height:200px;
+            border: 1px solid gray;
+            background: gray;
+            position: absolute;
+            transform: translateY(150px);
+            transition: 1s;
+        }
+        #container2>#box2 {
+            width:200px;
+            height:200px;
+            border: 1px solid gray;
+            background: gray;
+            position: absolute;
+            transform: translateY(150px);
+            transition: 1s;
+        }
+        #container3>#box3 {
+            width:200px;
+            height:200px;
+            border: 1px solid gray;
+            background: gray;
+            position: absolute;
+            transform: translateY(150px);
+            transition: 1s;
+        }
+
+        #container1:hover>#box1 {
+            transform: translateY(0px);
+        }
+        #container2:hover>#box2 {
+            transform: translateY(0px);
+        }
+        #container3:hover>#box3 {
+            transform: translateY(0px);
+        }
+
+        .box {text-align:center; line-height: 200px;}
+
+
+        /* #container1>.vid1{width:200px;height:200px;position:fixed;}
+        #container1>.vid1 video{width:200px; height:200px; object-fit:fill} */
+
+        #container2>.vid2{width:200px;height:200px;left:181px;top:-7px;position:fixed;}
+        #container2>.vid2 video{width:200px; height:200px; object-fit:fill;}
+
+        #container3>.vid3{width:200px;height:200px;left:393px;top:-7px;position:fixed;}
+        #container3>.vid3 video{width:200px; height:200px; object-fit:fill;}
+
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <!-- <figure class="vid1">
+        <video loop autoplay muted>
+            <source src="/images/city(night)_tiny.mp4" type="video/mp4">
+        </video>
+        </figure> -->
+        <li id="box1" class="box">1</li> 
+    </div>
+    <div id="container2">
+        <figure class="vid2">
+        <video loop autoplay muted>
+            <source src="/images/river_tiny.mp4" type="video/mp4">
+        </video>
+        </figure>
+        <li id="box2" class="box">2</li>
+    </div>
+    <div id="container3">
+        <figure class="vid3">
+        <video loop autoplay muted>
+            <source src="/images/strawberry_tiny.mp4" type="video/mp4">
+        </video>
+        </figure>
+        <li id="box3" class="box">3</li>
+    </div>
+
+    
+    
+    
+</body>
+</html>

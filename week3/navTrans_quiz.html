@@ -17,28 +17,34 @@
             color: white;
         }
         nav {
-            height: 50px;
+            height: 100px;
             background-color: gray;
-            position: relative;
+            /* position: relative; */
         }
         nav ul li {
             display: block;
             margin-right: 10px;
             float: left;
+            text-align: center;
         }
-        .box { 
+        #intro>div { 
             width:100px; 
-            height:100px;
+            height:70px;
             text-align: center;
             border:1px solid black;
+            opacity:0;
+            transform: translateY(-100px);
+            transition: 1s;
         }
-        #sub:not([hover]) {
-            transform: translateY(-130px);
-        }
-    
-        #sub:hover {
+
+        #intro:hover>div {
+            opacity:1;
+            background-color:rgba(59, 243, 182, 0.705);
+            color:white;
             transform: translateY(10px);
+            transition: 1s;
         }
+            
         article {
             width: 80%;
             height: 500px;
@@ -71,7 +77,7 @@
             <li>교육원소개</li>
             <li>교육원연혁</li>
             <li id="intro">과정소개
-                <div id="sub" class="box" style="z-index:10px;">
+                <div>
                     <p>백엔드과정</p>
                     <p>풀스택과정</p>
                     <p>UI/UX과정</p>
