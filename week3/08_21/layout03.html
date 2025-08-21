@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout연습03</title>
+    <style>
+        * {margin:0; padding:0;}
+        body {
+            color: white;
+            background: url('/images/bg5.jpg') no-repeat left top fixed;
+            background-size:cover;
+
+            /* 컨텐츠를 화면 정중앙에 배치 */
+            display:flex;               /* 플렉스 컨테이너 지정 */
+            justify-content:center;     /* 주축(가로방향) 정렬 방법 - 중앙 정렬 */
+            align-items:center;         /* 교차축 정렬 방법(세로방향) - 중앙 정렬 */
+            min-height:100vh;           /* 브라우저 높이의 100% (100vh = 100% viewport height) */
+        }
+        button {
+            background-color: #ccc;
+            font-size: 1.2em;
+            padding: 10px 50px;;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>로그인</h1>
+        <form action="login.jsp" method="post">
+            <div>
+                id <input type="text" id="id">
+            </div>
+            <div>
+                pw <input type="password" id="pw">
+            </div>
+            <div>
+                <input type="submit" value="로그인">
+                <input type="button" value="회원가입">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
