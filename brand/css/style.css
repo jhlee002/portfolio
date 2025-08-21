@@ -83,6 +83,8 @@ header{
   left:50px;
 }
 
+/* 이 밑으로 복습 필요 */
+
 /* contents 내 썸네일 */
 #side .con p {width:300px; height: 100px; position: absolute; left:50px;}
 #side .con p em{display: inline-block; font: bold 16px/1.7 arial; color: greenyellow; transform: skewX(40deg);}
