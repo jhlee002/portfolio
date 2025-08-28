@@ -33,26 +33,6 @@
       height: 70px !important;
     }
 
-    /* 1번. desktop화면 navber의 1depth 메뉴에 hover시 밑줄 생기게 하기 **************************************************************************************/
-    .navbar .container .collapse .navbar-nav .nav-item:hover label {
-        border-bottom:3px solid black;
-    }
-
-    /* 2번. desktop화면 navbar의 2depth 메뉴 원래사이트와 비슷하게 출력되도록 변경하기 **************************************************************************/
-    .navbar .container .collapse .navbar-nav .nav-item .dropdown-menu {
-        border-radius:0;
-    }
-    .navbar .container .collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item:link i {
-        opacity:0;
-    }
-    .navbar .container .collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover i {
-        opacity:1;
-    }
-    .navbar .container .collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
-        font-weight:900;
-    }
-
-
     #collapsibleNavbar {display: block !important;}
     #collapsibleNavbar-m {display: none !important;}
 
@@ -67,7 +47,7 @@
     }
 
     /* navigation 메뉴 옆 화살표 변환 애니메이션 */
-    #collapsibleNavbar .nav-item .nav-link:hover i {
+    #collapsibleNavbar .nav-item:hover i {
         /* animation-name: ani01;
         animation-duration: 0.5s; */
         animation: ani01 0.5s ease-in-out forwards !important;
@@ -85,6 +65,7 @@
         0%{transform: rotate(0deg);}
         100%{transform: rotate(90deg);}
     }
+
 
     .slider-pc{display: block !important;}  
     .slider-m{display: none !important;}  
@@ -218,19 +199,6 @@
       transform: scale(1.05);
     }
 
-    /* 3번. 브랜드 살펴보기에서 박스 가로방향 가운데 정렬하기 **************************************************************************************/
-    #brand .row {
-        display:flex;
-        justify-content:center;
-    }
-
-    /* 4번. 브랜드 살펴보기에서 박스안의 이미지를 박스기준으로 세로방향 가운데 정렬하기 ****************************************************************/
-    #brand .row .col-md-4 {
-        display:flex;
-        align-items:center;
-    }
-    
-
     footer.container-fluid{
       background: black;
     } 
@@ -356,40 +324,40 @@
     <!-- navigation ------------------------------------------------------------------------------------->
     <nav class="navbar navbar-expand-sm">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/Coke-company-logo-black.svg" alt="coca-cola logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <div>
-                    <a class="btn" href="#" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">&times;</a>
-                </div>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><label>Brands</label></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button"><label>Our Company</label> <i class="fa-solid fa-chevron-right"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Coca-Cola Company <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li><a class="dropdown-item" href="#">Since 1886 <i class="fa-solid fa-chevron-right"></i></a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button"><label>Discover</label> <i class="fa-solid fa-chevron-right"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Brand Story <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li><a class="dropdown-item" href="#">Coke & Meal <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li><a class="dropdown-item" href="#">Originals <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li><a class="dropdown-item" href="#">Opener <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li><a class="dropdown-item" href="#">Creations <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li><a class="dropdown-item" href="#">CokePLAY App <i class="fa-solid fa-chevron-right"></i></a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><label>Sustainability</label></a>
-                    </li>          
+        <a class="navbar-brand" href="#"><img src="img/Coke-company-logo-black.svg" alt="coca-cola logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <div>
+                <a class="btn" href="#" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">&times;</a>
+            </div>
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Brands</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button">Our Company <i class="fa-solid fa-chevron-right"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Coca-Cola Company</a></li>
+                  <li><a class="dropdown-item" href="#">Since 1886</a></li>
                 </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button">Discover <i class="fa-solid fa-chevron-right"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Brand Story</a></li>
+                  <li><a class="dropdown-item" href="#">Coke & Meal</a></li>
+                  <li><a class="dropdown-item" href="#">Originals</a></li>
+                  <li><a class="dropdown-item" href="#">Opener</a></li>
+                  <li><a class="dropdown-item" href="#">Creations</a></li>
+                  <li><a class="dropdown-item" href="#">CokePLAY App</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sustainability</a>
+            </li>          
+            </ul>
         </div>
     </div>
         <!-- 네비게이션 서브메뉴 모바일용 -------------------------------------------------------------------->
