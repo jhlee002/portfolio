@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
 
 *{padding:0; margin:0;}
 ul,ol{list-style: none;}
@@ -29,7 +30,7 @@ header{
 #gnb>li{position:relative;}
 #gnb>li>a{display: block;width: 220px;height: 50px;font: bold 18px/3 play;color: #222;box-sizing: border-box;padding-right: 40px;text-align: right;}
 #gnb>li.on>a{background: #111;color: #fff;}
-#gnb>li:hover>a{background: #616161;color: #fff;}
+#gnb>li:hover>a{background: #616161;color: #F9AE17;}
 #gnb em{display: inline-block;transform: skewX(10deg);}
 #gnb em i{margin-right: 20px;}
 
@@ -47,6 +48,13 @@ header{
 } 
 #gnb ul a{display: block;width: 150px;height: 40px;background: #222;border-bottom: 1px solid #74675C;font: bold 16px/2.5 arial;color:#fff;box-sizing: border-box;padding-left: 50px;margin-bottom: 3px;transition:0.5s;}
 #gnb ul a:hover{background: #74675C;color:#333;}
+
+/* 간편 주문 링크 */
+#easy-order a {
+  position: fixed;
+  bottom: 25px;
+  right: 400px;
+}
 
 /* sns 버튼 */
 #sns{position: fixed;top:40px;right:220px;}
@@ -87,14 +95,14 @@ header{
 #side .con p:nth-child(3){bottom:190px; transform:translateX(200px); transition: all 1.2s; }
 
 /* 자동롤링 버튼 */
-#side .btnContents { width:150px; height:50px; position:absolute;  bottom:40px; left:-100px; color:#74675C;	transform:skewX(0deg); }
-#side:hover .btnContents { left:700px;}	
+#side .btnContents { width:150px; height:50px; position:absolute;  bottom:40px; left:650px; color:#74675C;	transform:skewX(-40deg); }
+#side:hover .btnContents { left:-700px;}	
 .btnContents i { font-size:60px; position:absolute; bottom:0px; right:0px; opacity:0;}
 .btnContents i:nth-of-type(1) { animation:ani linear 1.5s 0s infinite;}
 .btnContents i:nth-of-type(2) { animation:ani linear 1.5s 0.5s infinite;}
 .btnContents i:nth-of-type(3) { animation:ani linear 1.5s 1.0s infinite;}
 
 @keyframes ani {
-  0% {right:0px; transform: scale(1); opacity: 0;}
-  100% { right:100px; transform: scale(1.5); opacity: 1;}
+  0% {right:100px; transform: scale(1); opacity: 0;}
+  100% { right:0px; transform: scale(1.5); opacity: 1;}
 }
