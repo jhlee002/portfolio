@@ -132,7 +132,7 @@ body{background: #eeeeee;}
 
 /* 디버깅용. 배경을 파란색으로 설정해서 파악하기 쉽게 */
 #story{
-  background: blue;
+  /* background: blue; */
 }
 
 /* 박스 설정 */
@@ -160,7 +160,7 @@ body{background: #eeeeee;}
 #story .row{
   display: flex !important; /* container에 display:flex 설정 */
   align-items: center !important;   /* container를 기준으로 자식(item)을 세로 가운데 설정 */
-  background: green;
+  /* background: green; */
   height: 600px !important;
   
 }
@@ -225,11 +225,31 @@ body{background: #eeeeee;}
   transform: scale(1.05);   /* 1.5배 확대 */
 }
 
+/* 3번. 브랜드 살펴보기에서 박스 가로방향 가운데 정렬하기 **************************************************************************************/
+#brand .row {
+    display:flex;
+    justify-content:center;
+}
+
+/* 4번. 브랜드 살펴보기에서 박스안의 이미지를 박스기준으로 세로방향 가운데 정렬하기 ****************************************************************/
+#brand .row .col-md-4 {
+    display:flex;
+    align-items:center;
+}
+
+#brand h1{text-align:center; font-weight:900;} /* "브랜드 살펴보기" 제목 가운데 정렬, 폰트 굵기 조정 */
+#brand .button-p{display:flex; justify-content:center;} /* "모두 보기" 버튼 가운데 정렬 */
+#brand .button-p a{width:30%; border-radius:30px;border:2px solid black; font-weight:bold} /* "모두 보기" 버튼 스타일 적용 */
+
 /* footer @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 /* 배경색 설정 */
 footer.container-fluid{
   background: black;
 } 
+
+footer #footer-pc {color:white;}  /* footer 글자색 흰색으로 변경 */
+footer #footer-pc .copyright {display:flex; justify-content: flex-end; font-size:0.7em;} /* 저작권 표시 우측하단에 위치 */
+
 
 /* pc용 footer내용과 mobile용 footer 내용을 미리 만들어 두고 교체방식으로 구현 */
 #footer-pc{display: block;} /* pc용 보이게 */
@@ -366,7 +386,7 @@ nav .container{padding:0 10px !important;}
 #month-pick{
   padding: 50px 0 !important;
   margin-bottom: 50px;
-  background: yellow;
+  /* background: yellow; */
   height: 500px !important;
   padding-right: 0 !important;
 }
@@ -387,6 +407,17 @@ nav .container{padding:0 10px !important;}
   margin-right: auto !important;
   margin-bottom: -50px !important; /* 아래쪽 박스가 위로 올라와서 겹치게 */
 }
+
+/* tomorrow에서 사진 위로 텍스트 박스가 위로 올라가게 설정 */
+/* #tomorrow .col-md-6:nth-child(1) {
+  
+  width:400px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -50px;
+
+} */
 
 /* pc용 brand와 mobile용 brand를 미리 만들어서 교체방식으로 구현 */
 #brand {display: none;} /* pc용 brand 안 보이게 */
@@ -413,6 +444,7 @@ nav .container{padding:0 10px !important;}
 #brand-m .col-md-6:hover{
   transform: scale(1.05);
 }
+
 
 /* 모바일용 footer와 pc용 footer를 미리 만들어서 교체방식으로 구현 */
 #footer-pc{display: none;}  /* pc용 footer 안 보이게 */
