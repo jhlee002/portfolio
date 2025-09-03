@@ -17,6 +17,17 @@
 /* 모바일용 서브메뉴가 안보이게 */
 #collapsibleNavbar-m{ opacity: 0 !important;}
 
+/* 지역 버튼 스타일 적용 */
+#collapsibleNavbar-m .row {
+  display:flex;
+  justify-content: center;
+}
+#collapsibleNavbar-m .row .button-region {
+  width:80% !important;
+  border-radius:20px;
+}
+
+
 /* 문서 배경색 */
 body{background: #eeeeee;}
 
