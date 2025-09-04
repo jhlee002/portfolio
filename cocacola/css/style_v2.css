@@ -22,10 +22,14 @@
   display:flex;
   justify-content: center;
 }
+#collapsibleNavbar-m .row .button-region:hover {
+  background-color:#E0E0E0;
+}
 #collapsibleNavbar-m .row .button-region {
   width:80% !important;
   border-radius:20px;
 }
+
 
 
 /* 문서 배경색 */
