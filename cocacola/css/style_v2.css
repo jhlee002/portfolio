@@ -290,204 +290,210 @@ footer #footer-pc .copyright {display:flex; justify-content: flex-end; font-size
     left: 0;
     
     } */
+      
+      
+  /* 코카콜라아이콘, 햄버거메뉴 위로 올라가게 조정 */
+  nav .container{padding:0 10px !important;}
+
+  /* 모바일용 2depth메뉴 안 보이게 */
+  #collapsibleNavbar-m{ opacity: 1 !important;}
+
+  /* 모바일용 2depth메뉴 설정. full screen */
+  #collapsibleNavbar-m{
+    position: fixed !important;   /* 위치 고정 */
+    width: 100% !important;
+    height: 100% !important;
+    top:0;
+    left: 0;
+    background-color: white !important; 
+    z-index: 999999999 !important; /* 맨 위로 올라오게 설정 */
+    color: black !important;
+  }
+
+  /* 서브메뉴 버튼 설정 */
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer; /* 커서모양을 손가락모양으로 변경. 클릭하도록 유도 */
+    padding: 18px;
+    width: 100%;
+    border: none; /* border 없애기 */
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+
+  /* 배경색 변경 */
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+
+  /* '>'화살표 설정 */
+  .accordion:after {
+    content: '\f054'; /* '>' 화살표 아이콘  */
+    font-family: "Font Awesome 7 Free"; /* fontawesom 버젼 7 무료 글꼴 */
+    color: #777;
+    font-weight: bold;
+    float: right;  /* 화살표를 가로방향 오른쪽으로 정렬 */
+    margin-left: 5px;
+  }
+
+  /* down 화살표 설정 */
+  .active:after {
+    content:'\f078'; /* down 화살표 아이콘  */
+  }
+
+  /* 버튼 클릭시 펼처지는 박스 설정 */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0; /* 처음에는 높이가 없음. 안 보이게. */
+    overflow: hidden; /* 부모 박스의 영역을 벗어나면 잘리게 */
+    transition: max-height 0.2s ease-out;
+  }
+
+  /* css연습문제12 - 1번 문제 */
+  #collapsibleNavbar-m .accordion{
+      font-family: 'Archivo Black';
+      font-size: x-large;
+  }
+  #collapsibleNavbar-m .panel a {
+      text-decoration: none;
+      color :black;
+  }
+  #collapsibleNavbar-m #closeMenu{
+    position:absolute;
+    right:0 !important;
+    margin-top:10px;
+    margin-right:10px;
+  }
+
+
+  /* slider ########################################################################################################*/
+  /* 글자 가운데 정렬 */
+  .slide{ text-align: center !important;}
+
+  /*슬라이더 크기 조절 */
+  .slider-container,
+  .slider,
+  .slider .slide,
+  .slider .slide img {
+    width: 100%;
+    height: 700px !important; /* 높이를 크게 설정 */
+    border-radius: 10px;
+  }
+  /* pc용 슬라이더와 모바일용 슬라이더를 미리 만들어 두고 교체방식으로 구현 */
+  .slider-pc{display: none !important;}  /* pc용 슬라이더 안 보이게*/
+  .slider-m{display: block !important;}   /* 모바일용 슬라이더 보이게 */
+
+  /* 글자와 버튼을 가운데 정렬하기 위해서 부모의 크기 조절 */
+  .slide .caption,
+  .slide .more{      
+    width: 100%;
+  }
+
+  /* 글자 위치 조절 */
+  .slide .caption{     
+    top: 550px !important;
+  }
+
+  /* 버튼 위치 조절 */
+  .slide .more{     
+    top: 650px !important;     
+  }
+
+  /* 이달의 PICK 박스 설정 */
+  #month-pick{
+    padding: 50px 0 !important;
+    margin-bottom: 50px;
+    /* background: yellow; */
+    height: 500px !important;
+    padding-right: 0 !important;
+  }
+
+  /* 이달의 PICK 박스 안의 이미지 설정 */
+  #month-pick .thumbnail img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 300px !important;
+  }
+
+  /* 1번 박스 설정. 1번 박스를 기준으로 2번 박스 위치 설정 */
+  #story .col-md-6:nth-child(1){
+    width:400px !important;
+    height: 200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: -50px !important; /* 아래쪽 박스가 위로 올라와서 겹치게 */
+  }
+
+  /* tomorrow에서 사진 위로 텍스트 박스가 위로 올라가게 설정 */
+  /* #tomorrow .col-md-6:nth-child(1) {
     
-    
-/* 코카콜라아이콘, 햄버거메뉴 위로 올라가게 조정 */
-nav .container{padding:0 10px !important;}
+    width:400px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -50px;
 
-/* 모바일용 2depth메뉴 안 보이게 */
-#collapsibleNavbar-m{ opacity: 1 !important;}
+  } */
 
-/* 모바일용 2depth메뉴 설정. full screen */
-#collapsibleNavbar-m{
-  position: fixed !important;   /* 위치 고정 */
-  width: 100% !important;
-  height: 100% !important;
-  top:0;
-  left: 0;
-  background-color: white !important; 
-  z-index: 999999999 !important; /* 맨 위로 올라오게 설정 */
-  color: black !important;
-}
+  /* pc용 brand와 mobile용 brand를 미리 만들어서 교체방식으로 구현 */
+  #brand {display: none;} /* pc용 brand 안 보이게 */
+  #brand-m {display: block;}  /* mobile용 brand 보이게 */
 
-/* 서브메뉴 버튼 설정 */
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer; /* 커서모양을 손가락모양으로 변경. 클릭하도록 유도 */
-  padding: 18px;
-  width: 100%;
-  border: none; /* border 없애기 */
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
+  /* 모바일용 brand안의 박스 설정 */
+  #brand-m .col-md-6{
+    background: white;
+    box-sizing: border-box;
+    margin: 10px;
+    transition: 0.5s;
+    width:210px;  /* 가로사이즈를 pc용보다 작게 */
+    height: 210px;    /* 세로사이즈를 pc용보다 작게 */
+    border-radius: 10px !important;
 
-/* 배경색 변경 */
-.active, .accordion:hover {
-  background-color: #ccc;
-}
+  }
 
-/* '>'화살표 설정 */
-.accordion:after {
-  content: '\f054'; /* '>' 화살표 아이콘  */
-  font-family: "Font Awesome 7 Free"; /* fontawesom 버젼 7 무료 글꼴 */
-  color: #777;
-  font-weight: bold;
-  float: right;  /* 화살표를 가로방향 오른쪽으로 정렬 */
-  margin-left: 5px;
-}
+  /* 부모 박스에 이미지 크기 딱 맞게 */
+  #brand-m .col-md-6 img{
+    width: 100%;  
+  }
 
-/* down 화살표 설정 */
-.active:after {
-  content:'\f078'; /* down 화살표 아이콘  */
-}
-
-/* 버튼 클릭시 펼처지는 박스 설정 */
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0; /* 처음에는 높이가 없음. 안 보이게. */
-  overflow: hidden; /* 부모 박스의 영역을 벗어나면 잘리게 */
-  transition: max-height 0.2s ease-out;
-}
-
-/* css연습문제12 - 1번 문제 */
-#collapsibleNavbar-m .accordion{
-    font-family: 'Archivo Black';
-    font-size: x-large;
-}
-#collapsibleNavbar-m .panel a {
-    text-decoration: none;
-    color :black;
-}
+  /* 마우스가 올라갔을 때 확대 */
+  #brand-m .col-md-6:hover{
+    transform: scale(1.05);
+  }
 
 
-/* slider ########################################################################################################*/
-/* 글자 가운데 정렬 */
-.slide{ text-align: center !important;}
+  /* 모바일용 footer와 pc용 footer를 미리 만들어서 교체방식으로 구현 */
+  #footer-pc{display: none;}  /* pc용 footer 안 보이게 */
+  #footer-m{ 
+    display: block;   /* 모바일용 footer 보이게 */
+    background: black;
+    color:white;    
+  }
 
-/*슬라이더 크기 조절 */
-.slider-container,
-.slider,
-.slider .slide,
-.slider .slide img {
-  width: 100%;
-  height: 700px !important; /* 높이를 크게 설정 */
-  border-radius: 10px;
-}
-/* pc용 슬라이더와 모바일용 슬라이더를 미리 만들어 두고 교체방식으로 구현 */
-.slider-pc{display: none !important;}  /* pc용 슬라이더 안 보이게*/
-.slider-m{display: block !important;}   /* 모바일용 슬라이더 보이게 */
+  /* 전체적으로 배경색을 검은색으로 통일. 글자색은 흰색으로 통일 */
+  #footer-m button,
+  #footer-m div{
+    background: black;
+    color:white;
+  }
 
-/* 글자와 버튼을 가운데 정렬하기 위해서 부모의 크기 조절 */
-.slide .caption,
-.slide .more{      
-  width: 100%;
-}
+  /* down 화살표를 클릭하면, up 화살표로 변경 설정 */
+  #footer-m .accordion:after {
+    content: '\f107'; /* down 화살표 아이콘  */
+    font-family: "Font Awesome 7 Free"; /* fontawesom 버젼 7 무료 글꼴*/
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
 
-/* 글자 위치 조절 */
-.slide .caption{     
-  top: 550px !important;
-}
-
-/* 버튼 위치 조절 */
-.slide .more{     
-  top: 650px !important;     
-}
-
-/* 이달의 PICK 박스 설정 */
-#month-pick{
-  padding: 50px 0 !important;
-  margin-bottom: 50px;
-  /* background: yellow; */
-  height: 500px !important;
-  padding-right: 0 !important;
-}
-
-/* 이달의 PICK 박스 안의 이미지 설정 */
-#month-pick .thumbnail img{
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  width: 100%;
-  height: 300px !important;
-}
-
-/* 1번 박스 설정. 1번 박스를 기준으로 2번 박스 위치 설정 */
-#story .col-md-6:nth-child(1){
-  width:400px !important;
-  height: 200px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  margin-bottom: -50px !important; /* 아래쪽 박스가 위로 올라와서 겹치게 */
-}
-
-/* tomorrow에서 사진 위로 텍스트 박스가 위로 올라가게 설정 */
-/* #tomorrow .col-md-6:nth-child(1) {
-  
-  width:400px;
-  height: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: -50px;
-
-} */
-
-/* pc용 brand와 mobile용 brand를 미리 만들어서 교체방식으로 구현 */
-#brand {display: none;} /* pc용 brand 안 보이게 */
-#brand-m {display: block;}  /* mobile용 brand 보이게 */
-
-/* 모바일용 brand안의 박스 설정 */
-#brand-m .col-md-6{
-  background: white;
-  box-sizing: border-box;
-  margin: 10px;
-  transition: 0.5s;
-  width:210px;  /* 가로사이즈를 pc용보다 작게 */
-  height: 210px;    /* 세로사이즈를 pc용보다 작게 */
-  border-radius: 10px !important;
-
-}
-
-/* 부모 박스에 이미지 크기 딱 맞게 */
-#brand-m .col-md-6 img{
-  width: 100%;  
-}
-
-/* 마우스가 올라갔을 때 확대 */
-#brand-m .col-md-6:hover{
-  transform: scale(1.05);
-}
-
-
-/* 모바일용 footer와 pc용 footer를 미리 만들어서 교체방식으로 구현 */
-#footer-pc{display: none;}  /* pc용 footer 안 보이게 */
-#footer-m{ 
-  display: block;   /* 모바일용 footer 보이게 */
-  background: black;
-  color:white;    
-}
-
-/* 전체적으로 배경색을 검은색으로 통일. 글자색은 흰색으로 통일 */
-#footer-m button,
-#footer-m div{
-  background: black;
-  color:white;
-}
-
-/* down 화살표를 클릭하면, up 화살표로 변경 설정 */
-#footer-m .accordion:after {
-  content: '\f107'; /* down 화살표 아이콘  */
-  font-family: "Font Awesome 7 Free"; /* fontawesom 버젼 7 무료 글꼴*/
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-#footer-m .active:after {
-  content:'\f106'; /* up 화살표 아이콘  */
-}
+  #footer-m .active:after {
+    content:'\f106'; /* up 화살표 아이콘  */
+  }
 
 }
