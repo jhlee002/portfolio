@@ -496,4 +496,12 @@ footer #footer-pc .copyright {display:flex; justify-content: flex-end; font-size
     content:'\f106'; /* up 화살표 아이콘  */
   }
 
+  #footer-m .accordion{
+    font-family: 'Archivo Black';
+    font-size: x-large;
+  }
+  #footer-m .panel a{
+    text-decoration:none;
+    color:white;
+  }
 }
