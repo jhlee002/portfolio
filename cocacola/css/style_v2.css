@@ -180,6 +180,11 @@ body{background: #eeeeee;}
   
 }
 
+#story .row .story01_bg,
+#tomorrow .row .tomorrow01_bg {
+  background-color:#eeeeee;
+}
+
 /* 자식(item) 개별적으로 위치 설정 */
 #story .col-md-6:nth-child(1){
   align-self: flex-start !important;     /* 부모의 세로 위쪽에 맞춤 */
@@ -501,6 +506,21 @@ footer #footer-pc .copyright {display:flex; justify-content: flex-end; font-size
     transform: scale(1.05);
   }
 
+  /* 브랜드 살펴보기에서 박스 가로방향 가운데 정렬하기 **************************************************************************************/
+  #brand-m .row {
+      display:flex;
+      justify-content:center;
+  }
+
+  /* 브랜드 살펴보기에서 박스안의 이미지를 박스기준으로 세로방향 가운데 정렬하기 ****************************************************************/
+  #brand-m .row .col-md-6 {
+      display:flex;
+      align-items:center;
+  }
+
+  #brand-m h1{text-align:center; font-weight:900;} /* "브랜드 살펴보기" 제목 가운데 정렬, 폰트 굵기 조정 */
+  #brand-m .button-mb{display:flex; justify-content:center;} /* "모두 보기" 버튼 가운데 정렬 */
+  #brand-m .button-mb .btn{width:100%; border-radius:30px; border:2px solid black; font-weight:bold}
 
   /* 모바일용 footer와 pc용 footer를 미리 만들어서 교체방식으로 구현 */
   #footer-pc{display: none;}  /* pc용 footer 안 보이게 */
