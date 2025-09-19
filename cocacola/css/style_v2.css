@@ -109,6 +109,19 @@ body{background: #eeeeee;}
   border-radius: 10px;  /* 모서리를 둥글게 */
 }
 
+/* 슬라이드 서식 명도 변경 - 2번째 슬라이드 어둡게 변경 */
+#slider  .slider .slide .bg_set1{
+ /* opacity: */
+}
+/* 캡션 내부 텍스트 서식 */
+#slider .slider .slide .caption{
+  color:white;
+}
+#slider .slider .slide .caption h3{
+  font-weight:900;
+}
+
+
 /* 버튼 설정. .btn은 bootstrap에 있는 클래스명 */
 .slider .slide .btn{
   background-color: white;
@@ -135,6 +148,17 @@ body{background: #eeeeee;}
   border-top-right-radius: 10px;
   width: 100%;
   height: 300px;
+}
+
+/* 이달의 PICK 내부 글자크기 조정 */
+#month-pick .row .col-md-4 .thumbnail p{
+  font-size:larger;
+  font-weight:bold;
+}
+/* 제목("이달의 PICK") 위치조정 */
+#month-pick h1{
+  text-align:center;
+  font-weight:900;
 }
 
 /* story @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
@@ -301,6 +325,11 @@ footer #footer-pc .copyright {display:flex; justify-content: flex-end; font-size
 
   /* 모바일용 2depth메뉴 안 보이게 */
   #collapsibleNavbar-m{ opacity: 1 !important;}
+
+  /* 모바일용 이달의 PICK 내부 글자크기 조정 */
+  #month-pick .row .col-md-4 .thumbnail p{
+    font-size:larger;
+  }
 
   /* 모바일용 코카콜라 Real Magic 스토리 css적용,
   모바일용 지속 가능한 미래 css적용 */
